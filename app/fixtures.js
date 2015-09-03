@@ -3,12 +3,12 @@ import {Posts} from './collections';
 
 export function createPosts() {
   console.log('Creating fake posts');
-  [1, 2, 3, 4].forEach(function(count) {
+  for (let i=0; i<100; i++){
     Posts.insert({
-      name: 'Test post # ' + count,
+      name: 'Test post # ' + i,
       desc: 'How now brown cow',
     });
-  });
+  };
 }
 
 export function createUsers() {

@@ -2,3 +2,10 @@ body {
   font-family: sans-serif;
   font-size: 20px;
 }
+
+a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 2px;
+}
