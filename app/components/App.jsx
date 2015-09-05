@@ -18,7 +18,7 @@ var ListData = React.createClass({
     });
     return {
       isReady: postsSub.ready() || false,
-      posts: Posts.find({},{sort:{name:1}}).fetch()
+      posts: Posts.find({},{sort:{name:-1}}).fetch()
     };
   },
 
@@ -41,7 +41,7 @@ var ListData = React.createClass({
           <a onClick={() => {this.props.signals.loadMore() }}>Load more</a><br />
           <a onClick={() => {this.props.signals.searchText({filter:''}) }}>Reset filter</a>
           Set <a onClick={() => {this.props.signals.searchText({filter:'9'}) }}>filter 9</a>
-          <a onClick={() => {this.props.signals.insertPost({name:`Test 9 ${new Date()} `}) }}>Insert Post 9</a>
+        <a onClick={() => {this.props.signals.insertPost({name:`aTest ${(new Date()).getTime()}`}) }}>Insert Post random</a>
 
 
           Go to<a onClick={() => this.props.signals.homeOpened() }>Home</a>

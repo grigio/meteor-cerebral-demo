@@ -22,7 +22,7 @@ Meteor.publish('posts', function(query) {
   (searchText !=='') ?
     filter={name: {$regex: searchText, $options: 'i'}} : filter={};
 
-  let cursor = Posts.find(filter,{ limit:limit, sort: {name: 1} });
+  let cursor = Posts.find(filter,{ limit:limit, sort: {name: -1} });
   return cursor;
 });
 
